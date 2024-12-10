@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intro to Alpine.js</title>
+    <script src="//unpkg.com/alpinejs" defer></script>
+  </head>
+  <body>
+    <div x-data="{counter: 2}">
+      <button x-on:click="counter++">Plus</button>
+      <p>Show Counter <i x-text="counter"></i></p>
+      <button x-on:click="counter--">Minus</button>
+    </div>
+    </div>
+  </body>
+</html>
