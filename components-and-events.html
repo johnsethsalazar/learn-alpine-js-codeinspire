@@ -7,11 +7,13 @@
     <script src="//unpkg.com/alpinejs" defer></script>
   </head>
   <body>
-    <div x-data="{counter: 2}">
+    <div x-data="{counter: 2, name: 'Alpine app'}">
       <button x-on:click="counter++">Plus</button>
       <p>Show Counter <i x-text="counter"></i></p>
       <button x-on:click="counter--">Minus</button>
-    </div>
+      <div x-data="{child: true}">
+        
+      </div>
     </div>
   </body>
 </html>
