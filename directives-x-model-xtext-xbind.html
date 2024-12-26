@@ -8,8 +8,16 @@
   </head>
   <body>
     <div x-data="{ title: '' }">
-      <input type="text" x-model.debounce.10000ms="title" />
+      <input type="text" x-model.debounce="title" />
       <p x-html="title"></p>
+    </div>
+
+    <h3>Display image here</h3>
+
+    <div x-data="{ image: '' }">
+      <h4>Paste image URL</h4>
+      <input type="text" x-model.debounce="image" />
+      <img x-bind:src="image" alt="image" />
     </div>
   </body>
 </html>
