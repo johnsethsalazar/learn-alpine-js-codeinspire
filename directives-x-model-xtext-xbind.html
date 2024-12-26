@@ -17,7 +17,7 @@
     <div x-data="{ image: '' }">
       <h4>Paste image URL</h4>
       <input type="text" x-model.debounce="image" />
-      <img x-bind:src="image" alt="image" />
+      <img x-show="image != ''" x-bind:src="image" alt="image" />
     </div>
   </body>
 </html>
