@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Directives x-for looping</title>
+  <script src="//unpkg.com/alpinejs" defer></script>
+</head>
+<body>
+  <div x-data="{ title: '', todoList: ['Shopping', 'Eating', 'Sleeping'] }">
+    <div>
+      <input type="text" x-model="title">
+      <button @click="todoList.push(title); title = ''">Add to do</button>
+    </div>
+    <ul>
+      <template x-for="(todo, index) in todoList">
+        <li x-text="todo" :key="index"></li>
+      </template>
+    </ul>
+  </div>
+</body>
+</html>
