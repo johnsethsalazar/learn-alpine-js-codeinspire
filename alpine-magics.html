@@ -11,9 +11,18 @@
     />
 </head>
 <body>
-  <div x-data>
+  <!-- <div x-data>
     <button @click="$el.innerHTML = 'Hello World!'">Replace me with "Hello World!"</button>
-    <!-- <button @click="console.log($el)">Replace me with "Hello World!"</button> -->
+    <button @click="console.log($el)">Replace me with "Hello World!"</button>
+  </div> -->
+  <div x-data="{title: 'component 1'}">
+    <button @click="$dispatch('fire')">Update component 2</button>
+  </div>
+  <hr>
+  <div x-data="{title: 'component 2'}">
+    <p x-text="title" @fire.window="title = 'Component 1 fired event'">
+
+    </p>
   </div>
 </body>
 </html>
